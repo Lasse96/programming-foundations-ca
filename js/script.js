@@ -10,11 +10,14 @@ if (outOfStock == true) {
 
 // Oppgave 2
 
+
 for (let a = 15; a <= 25; a++) {
-    if (a === 17 || 20) {
-        console.log(a);
-    }
-}
+    if (a <=16 || a >=21) {
+        continue;
+    } 
+    console.log(a);
+};
+
 
 // Oppgave 3
 
@@ -43,7 +46,7 @@ var games = [
 
 const li = document.querySelector("ul.games")
 for (let i = 0; i < games.length; i++) {
-    if (games[i].rating <= 3.5) {
+    if (games[i].rating <= 3.5 && typeof games[i].rating == "number") {
         li.innerHTML += "<li>" + games[i].title + " : " + games[i].rating + "</li>";
     }
 };
@@ -52,12 +55,75 @@ for (let i = 0; i < games.length; i++) {
 
 function whatIDontLike(value) {
     if (typeof value == "string") {
-        console.log("I don't like " + value);
+        return "I don't like " + value
     }
     else console.log("Please send in a string");
-}
-value = "Giraffe";
+};
+value = "Giraffes";
 console.log(whatIDontLike(value));
 
 // Oppgave 5
 
+// function tall(t1, t2) {
+//     if (typeof t1 == "number" && typeof t2 == "number") {
+//         return t3;
+//     }
+//     else if (isNaN(t1) || isNaN(t2)) {
+//         console.log("Invalid argument(s)");
+//     }
+    
+// }
+// t1 = "hei";
+// t2 = "10";
+// const t3 = t1 - t2;
+// console.log(t3);
+
+// Oppgave 6
+
+const button = document.querySelector("button.page");
+const h1 = document.querySelector("h1");
+const body = document.querySelector("body");
+const title = document.querySelector("title");
+const ul = document.querySelector("ul")
+
+function endre() {
+    title.innerHTML = "Updated title";
+    body.style.backgroundColor = "yellow";
+    h1.style.color = "green";
+    h1.style.fontFamily = "impact";
+    h1.innerHTML = "<a href='#'>Programming Foundations Course Assignment</a>";
+    ul.style.listStyle = "none";
+}
+
+button.onclick = endre;
+
+// Oppgave 7
+
+var toys = [
+	{
+		name: "Lego",
+		price: 15.6,
+	},
+	{
+		name: "Master of the Universe",
+		price: "28.3",
+	},
+	{
+		name: "Barbie",
+		price: null,
+	},
+	{
+		name: "Mr Potato Head",
+		price: 89.99,
+	},
+];
+
+const button2 = document.querySelector("button.price");
+const total = document.querySelector("div#total")
+
+function toy() {
+    for (let b = 0; b < toys.length; b++) {
+        return total.innerHTML = parseInt(toys[b].price) + parseInt(toys[b].price);
+    }
+}
+button2.onclick = toy;
