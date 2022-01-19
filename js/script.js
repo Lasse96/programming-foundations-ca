@@ -64,19 +64,17 @@ console.log(whatIDontLike(value));
 
 // Oppgave 5
 
-// function tall(t1, t2) {
-//     if (typeof t1 == "number" && typeof t2 == "number") {
-//         return t3;
-//     }
-//     else if (isNaN(t1) || isNaN(t2)) {
-//         console.log("Invalid argument(s)");
-//     }
+function tall(t1, t2) {
+    if (typeof t1 === "number" && typeof t2 === "number") {
+        return t1 - t2
+    }
+    else 
+        console.log("Invalid argument(s)");
     
-// }
-// t1 = "hei";
-// t2 = "10";
-// const t3 = t1 - t2;
-// console.log(t3);
+}
+t1 = "33";
+t2 = "10";
+console.log(tall(t1, t2));
 
 // Oppgave 6
 
