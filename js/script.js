@@ -64,17 +64,23 @@ console.log(whatIDontLike(value));
 
 // Oppgave 5
 
+
 function tall(t1, t2) {
-    if (typeof t1 === "number" && typeof t2 === "number") {
-        return t1 - t2
-    }
-    else 
-        console.log("Invalid argument(s)");
-    
-}
-t1 = "33";
-t2 = "10";
-console.log(tall(t1, t2));
+	const numb1 = Number(t1)
+	const numb2 = Number(t2)
+	const sub = document.querySelector("#subtraction")
+  
+	if(isNaN(numb1) || isNaN(numb2)){
+		sub.innerHTML = "Invalid argument(s)"
+  }else{
+	 	return sub.innerHTML = numb1 - numb2
+  }
+  } 
+
+  t1 = "50"
+  t2 = 20
+  console.log(tall(t1, t2));
+
 
 // Oppgave 6
 
@@ -121,7 +127,7 @@ const total = document.querySelector("div#total")
 
 function toy() {
     for (let b = 0; b < toys.length; b++) {
-        return total.innerHTML = parseInt(toys[b].price) + parseInt(toys[b].price);
+        return total.innerHTML = Number(toys[0].price) + Number(toys[1].price);
     }
 }
 button2.onclick = toy;
