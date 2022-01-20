@@ -127,7 +127,7 @@ const total = document.querySelector("div#total")
 
 function toy() {
     for (let b = 0; b < toys.length; b++) {
-        return total.innerHTML = Number(toys[0].price) + Number(toys[1].price);
+        return total.innerHTML = Number(toys[0].price) + Number(toys[1].price) + Number(toys[2].price) + Number(toys[3].price);
     }
 }
 button2.onclick = toy;
