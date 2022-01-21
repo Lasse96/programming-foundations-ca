@@ -88,16 +88,20 @@ const button = document.querySelector("button.page");
 const h1 = document.querySelector("h1");
 const body = document.querySelector("body");
 const title = document.querySelector("title");
-const ul = document.querySelector("ul")
+const ul = document.querySelector("ul");
+
 
 function endre() {
     title.innerHTML = "Updated title";
     body.style.backgroundColor = "yellow";
-    h1.style.color = "green";
+	// h1.style.color = "green"; kan ha denne, men da mister den fargen når h1 endres til en link.
     h1.style.fontFamily = "impact";
     h1.innerHTML = "<a href='#'>Programming Foundations Course Assignment</a>";
     ul.style.listStyle = "none";
-}
+	const a = document.querySelector("a");
+	a.style.color = "green";
+	// a.style.textDecoration = "none"; kan ha denne for å fjerne underline til linken.
+};
 
 button.onclick = endre;
 
@@ -124,11 +128,11 @@ var toys = [
 
 const button2 = document.querySelector("button.price");
 const total = document.querySelector("div#total");
-const test = 0;
+let summering = 0;
 
 function toy() {
     for (let b = 0; b < toys.length; b++) {
-       total.innerHTML = Number(toys[b].price) + test;
+       total.innerHTML = summering += Number(toys[b].price);
     }
 };
 button2.onclick = toy;
