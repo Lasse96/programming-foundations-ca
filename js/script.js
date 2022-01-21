@@ -123,11 +123,12 @@ var toys = [
 ];
 
 const button2 = document.querySelector("button.price");
-const total = document.querySelector("div#total")
+const total = document.querySelector("div#total");
+const test = 0;
 
 function toy() {
     for (let b = 0; b < toys.length; b++) {
-        return total.innerHTML = Number(toys[0].price) + Number(toys[1].price) + Number(toys[2].price) + Number(toys[3].price);
+       total.innerHTML = Number(toys[b].price) + test;
     }
-}
+};
 button2.onclick = toy;
