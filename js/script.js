@@ -12,10 +12,10 @@ if (outOfStock == true) {
 
 
 for (let a = 15; a <= 25; a++) {
-    if (a <=16 || a >=21) {
-        continue;
+    if (a ==17 || a ==20) {
+        console.log(a);
     } 
-    console.log(a);
+    
 };
 
 
