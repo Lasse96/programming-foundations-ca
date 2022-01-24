@@ -66,19 +66,19 @@ console.log(whatIDontLike(value));
 
 
 function tall(t1, t2) {
-	const numb1 = Number(t1)
-	const numb2 = Number(t2)
-	const sub = document.querySelector("#subtraction")
+	const numb1 = Number(t1);
+	const numb2 = Number(t2);
+	const sub = document.querySelector("#subtraction");
   
 	if(isNaN(numb1) || isNaN(numb2)){
 		sub.innerHTML = "Invalid argument(s)"
   }else{
 	 	return sub.innerHTML = numb1 - numb2
   }
-  } 
+  };
 
-  t1 = "50"
-  t2 = 20
+  t1 = "50";
+  t2 = 20;
   console.log(tall(t1, t2));
 
 
